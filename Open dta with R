@@ -1,8 +1,15 @@
+library(haven)
+library(readxl)
 #获取当前path
 getwd() 
 #设置path
 setwd("C:/Users/19156/Desktop")
+
 #读取 .dta 文件 
 df <- read.dta('dist_cepii.dta')
 #可以在RStudio中看 也可以写入 .csv 随时查阅（share with grouper）
 write.csv(df,file = "dist.csv")
+
+#面板数据分析 package
+library(Formula)
+library(plm)
